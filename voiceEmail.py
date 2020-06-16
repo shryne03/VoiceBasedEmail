@@ -100,7 +100,7 @@ if text == '1' or text == 'One' or text == 'one':
     os.remove(ttsname)
     mail.close()   
     
-if text == '2' or text == 'tu' or text == 'two' or text == 'Tu' or text == 'to' or text == 'To' or text == 'TO':
+if text == '2' or text == 'tu' or text == 'two' or text == 'Tu' or text == 'to' or text == 'To' or text == 'TO' or text =='chew':
     mail = imaplib.IMAP4_SSL('imap.gmail.com',993) #this is host and port area.... ssl security
     unm = ('miniprj2020@gmail.com')  #username
     psw = ('shryne12345')  #password
