@@ -9,13 +9,7 @@ from gtts import gTTS
 import pyglet
 import os, time
 import playsound
- 
-#pyglet.lib.load_library('avbin')
-#pyglet.have_avbin=True
- 
-#project: :. Project: Voice based Email for blind :. 
-# Author: Sayak Naskar
- 
+  
 #fetch project name
 tts = gTTS(text="Project: Voice based Email for blind", lang='en')
 ttsname=("C:/Users/gonsa/Desktop/hacky1997/hacky/name.mp3") 
@@ -31,7 +25,7 @@ print ("You are logging from : "+login())
 #choices
 print ("1. composed a mail.")
 tts = gTTS(text="option 1. composed a mail.", lang='en')
-ttsname=("C:/Users/gonsa/Desktop/hacky1997/hacky/hello.mp3") #Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
+ttsname=("C:/Users/gonsa/Desktop/hacky1997/hacky/hello.mp3") 
 tts.save(ttsname)
  
 playsound.playsound(ttsname, True)
@@ -47,7 +41,7 @@ os.remove(ttsname)
  
 #this is for input choices
 tts = gTTS(text="Your choice ", lang='en')
-ttsname=("C:/Users/gonsa/Desktop/hacky1997/hacky/hello.mp3") #Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
+ttsname=("C:/Users/gonsa/Desktop/hacky1997/hacky/hello.mp3") 
 tts.save(ttsname)
  
 playsound.playsound(ttsname, True)
@@ -76,7 +70,7 @@ if text == '1' or text == 'One' or text == 'one':
     with sr.Microphone() as source:
         print ("Your message :")
         tts = gTTS(text="Your message: ", lang='en')
-        ttsname=("C:/Users/gonsa/Desktop/hacky1997/hacky/hello.mp3") #Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
+        ttsname=("C:/Users/gonsa/Desktop/hacky1997/hacky/hello.mp3")
         tts.save(ttsname)
  
         playsound.playsound(ttsname, True)
@@ -99,7 +93,7 @@ if text == '1' or text == 'One' or text == 'one':
     mail.sendmail('gonsalveshawn@gmail.com','gonsalveshawn@gmail.com',msg) #send part
     print ("Congrates! Your mail has send. ")
     tts = gTTS(text="Congrates! Your mail has send. ", lang='en')
-    ttsname=("C:/Users/gonsa/Desktop/hacky1997/hacky/send.mp3") #Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
+    ttsname=("C:/Users/gonsa/Desktop/hacky1997/hacky/send.mp3") 
     tts.save(ttsname)
     playsound.playsound(ttsname, True)
     os.remove(ttsname)
@@ -113,7 +107,7 @@ if text == '2' or text == 'tu' or text == 'two' or text == 'Tu' or text == 'to' 
     stat, total = mail.select('Inbox')  #total number of mails in inbox
     print ("Number of mails in your inbox :"+str(total))
     tts = gTTS(text="Total mails are :"+str(total), lang='en') #voice out
-    ttsname=("C:/Users/gonsa/Desktop/hacky1997/hacky/total.mp3") #Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
+    ttsname=("C:/Users/gonsa/Desktop/hacky1997/hacky/total.mp3") 
     tts.save(ttsname)
     playsound.playsound(ttsname, True)
     os.remove(ttsname)
@@ -122,7 +116,7 @@ if text == '2' or text == 'tu' or text == 'two' or text == 'Tu' or text == 'to' 
     unseen = mail.search(None, 'UnSeen') # unseen count
     print ("Number of UnSeen mails :"+str(unseen))
     tts = gTTS(text="Your Unseen mail :"+str(unseen), lang='en')
-    ttsname=("C:/Users/gonsa/Desktop/hacky1997/hacky/unseen.mp3") #Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
+    ttsname=("C:/Users/gonsa/Desktop/hacky1997/hacky/unseen.mp3") 
     tts.save(ttsname)
     playsound.playsound(ttsname, True)
     os.remove(ttsname)
@@ -138,7 +132,7 @@ if text == '2' or text == 'tu' or text == 'two' or text == 'Tu' or text == 'to' 
     print ("From: "+email_message['From'])
     print ("Subject: "+str(email_message['Subject']))
     tts = gTTS(text="From: "+email_message['From']+" And Your subject: "+str(email_message['Subject']), lang='en')
-    ttsname=("C:/Users/gonsa/Desktop/hacky1997/hacky/mail.mp3") #Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
+    ttsname=("C:/Users/gonsa/Desktop/hacky1997/hacky/mail.mp3")
     tts.save(ttsname)
     playsound.playsound(ttsname, True)
     os.remove(ttsname)
@@ -151,7 +145,7 @@ if text == '2' or text == 'tu' or text == 'two' or text == 'Tu' or text == 'to' 
     txt = soup.get_text()
     print ("Body :"+txt)
     tts = gTTS(text="Body: "+txt, lang='en')
-    ttsname=("C:/Users/gonsa/Desktop/hacky1997/hacky/body.mp3") #Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
+    ttsname=("C:/Users/gonsa/Desktop/hacky1997/hacky/body.mp3") 
     tts.save(ttsname)
     playsound.playsound(ttsname, True)
     os.remove(ttsname)
