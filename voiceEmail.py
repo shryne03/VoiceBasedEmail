@@ -1,4 +1,5 @@
-Import speech_recognition as sr
+
+import speech_recognition as sr
 import smtplib
  
 import sys
@@ -151,4 +152,4 @@ if text == '2' or text == 'tu' or text == 'two' or text == 'Tu' or text == 'to' 
     os.remove(ttsname)
     mail.close()
     mail.logout()
- 
+
