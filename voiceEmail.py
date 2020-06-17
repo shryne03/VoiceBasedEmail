@@ -231,6 +231,12 @@ if text == '2' or text == 'tu' or text == 'two' or text == 'Tu' or text == 'to' 
     tts.save(ttsname)
     playsound.playsound(ttsname, True)
     os.remove(ttsname)
+    print ("Safely logging you out:")
+    tts = gTTS(text="Safely logging you out: ", lang='en')
+    ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/send.mp3")
+    tts.save(ttsname)
+    playsound.playsound(ttsname, True)
+    os.remove(ttsname)
     mail.close()
     mail.logout()
 
