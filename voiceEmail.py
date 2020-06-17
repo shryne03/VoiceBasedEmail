@@ -26,7 +26,7 @@ print ("You are logging from : "+login())
 mail = smtplib.SMTP('smtp.gmail.com',587)    #host and port area
 mail.ehlo()  #Hostname to send for this command defaults to the FQDN of the local host.
 mail.starttls() #security connection
-mail.login('gonsa015@cougars.csusm.edu','Humbhatwadi1') #login part
+mail.login('dummyvoicebasedemail@gmail.com','dummyvoicebasedemail123') #login part
 
 tts = gTTS(text="Successfully logged in:", lang='en')
 ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/hello.mp3") #Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
@@ -172,7 +172,7 @@ if text == '1' or text == 'One' or text == 'one':
 
     if text3 == 'Yes' or text3 == 'yes' or text3 == 'YES':
         msg = text1
-        mail.sendmail('gonsa015@cougars.csusm.edu','gonsa015@cougars.csusm.edu',msg) #send part
+        mail.sendmail('dummyvoicebasedemail@gmail.com','dummyvoicebasedemail@gmail.com',msg) #send part
         print ("Congrats! Your mail has been sent. ")
         tts = gTTS(text="Congrats! Your mail has been sent. ", lang='en')
         ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/send.mp3") #Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
@@ -191,8 +191,8 @@ if text == '1' or text == 'One' or text == 'one':
     
 if text == '2' or text == 'tu' or text == 'two' or text == 'Tu' or text == 'to' or text == 'To' or text =='chew':
     mail = imaplib.IMAP4_SSL('imap.gmail.com',993) #this is host and port area.... ssl security
-    unm = ('gonsa015@cougars.csusm.edu')  #username
-    psw = ('Humbhatwadi1')  #password
+    unm = ('dummyvoicebasedemail@gmail.com')  #username
+    psw = ('dummyvoicebasedemail123')  #password
     mail.login(unm,psw)  #login
     stat, total = mail.select('Inbox')  #total number of mails in inbox
     print ("Number of mails in your inbox :"+str(total))
