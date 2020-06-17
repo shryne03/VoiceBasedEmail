@@ -114,13 +114,13 @@ if text == '2' or text == 'tu' or text == 'two' or text == 'Tu' or text == 'to' 
     os.remove(ttsname)
     
     #unseen mails
-    unseen = mail.search(None, 'UnSeen') # unseen count
-    print ("Number of UnSeen mails :"+str(unseen))
-    tts = gTTS(text="Your Unseen mail :"+str(unseen), lang='en')
-    ttsname=("C:/Users/gonsa/Desktop/hacky1997/hacky/unseen.mp3") 
-    tts.save(ttsname)
-    playsound.playsound(ttsname, True)
-    os.remove(ttsname)
+   # unseen = mail.search(None, 'UnSeen') # unseen count
+    #print ("Number of UnSeen mails :"+str(unseen))
+    #tts = gTTS(text="Your Unseen mail :"+str(unseen), lang='en')
+    #ttsname=("C:/Users/gonsa/Desktop/hacky1997/hacky/unseen.mp3") 
+    #tts.save(ttsname)
+    #playsound.playsound(ttsname, True)
+    #os.remove(ttsname)
     
     #search mails
     result, data = mail.uid('search',None, "ALL")
