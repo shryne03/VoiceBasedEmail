@@ -179,6 +179,12 @@ if text == '1' or text == 'One' or text == 'one':
         tts.save(ttsname)
         playsound.playsound(ttsname, True)
         os.remove(ttsname)
+        print ("Safely logging you out:")
+        tts = gTTS(text="Safely logging you out: ", lang='en')
+        ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/send.mp3")
+        tts.save(ttsname)
+        playsound.playsound(ttsname, True)
+        os.remove(ttsname)
         mail.close()
     if text3 == 'No' or text3 == 'no' or text3 == 'NO':  
         print ("Safely logging you out:")
