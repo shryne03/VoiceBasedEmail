@@ -7,7 +7,6 @@ from bs4 import BeautifulSoup
 import email
 import imaplib
 from gtts import gTTS
-import pyglet
 import os, time
 import playsound
   
@@ -16,7 +15,7 @@ ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/name.mp3")
 tts.save(ttsname)
 
 playsound.playsound(ttsname, True)
-os.remove(ttsname)
+os.remove(ttsname) #remove the file from the specified directory
 
 #login from os
 login = os.getlogin
@@ -29,7 +28,7 @@ mail.starttls() #security connection
 mail.login('dummyvoicebasedemail@gmail.com','dummyvoicebasedemail123') #login part
 
 tts = gTTS(text="Successfully logged in:", lang='en')
-ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/hello.mp3") #Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
+ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/hello.mp3") 
 tts.save(ttsname)
 playsound.playsound(ttsname, True)
 os.remove(ttsname)
@@ -37,7 +36,7 @@ os.remove(ttsname)
 #choices
 print ("1. Compose a mail.")
 tts = gTTS(text="option 1. compose a mail.", lang='en')
-ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/hello.mp3") #Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
+ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/hello.mp3") 
 tts.save(ttsname)
 
 playsound.playsound(ttsname, True)
@@ -53,7 +52,7 @@ os.remove(ttsname)
 
 #this is for input choices
 tts = gTTS(text="Your choice ", lang='en')
-ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/hello.mp3") #Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
+ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/hello.mp3") 
 tts.save(ttsname)
 
 playsound.playsound(ttsname, True)
@@ -73,7 +72,7 @@ try:
 except sr.UnknownValueError:
     print("Google Speech Recognition could not understand audio.")
     tts = gTTS(text="Google Speech Recognition could not understand audio", lang='en')
-    ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/hello.mp3") #Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
+    ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/hello.mp3") 
     tts.save(ttsname)
     playsound.playsound(ttsname, True)
     os.remove(ttsname) 
@@ -81,18 +80,18 @@ except sr.UnknownValueError:
 except sr.RequestError as e:
     print("Could not request results from Google Speech Recognition service; {0}".format(e)) 
     tts = gTTS(text="Could not request results from Google Speech Recognition service", lang='en')
-    ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/hello.mp3") #Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
+    ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/hello.mp3") 
     tts.save(ttsname)
     playsound.playsound(ttsname, True)
     os.remove(ttsname) 
 
-#choices details
+
 if text == '1' or text == 'One' or text == 'one':
-    r = sr.Recognizer() #recognize
+    r = sr.Recognizer() 
     with sr.Microphone() as source:
         print ("Your message :")
         tts = gTTS(text="Your message: ", lang='en')
-        ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/hello.mp3") #Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
+        ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/hello.mp3") 
         tts.save(ttsname)
 
         playsound.playsound(ttsname, True)
@@ -103,12 +102,12 @@ if text == '1' or text == 'One' or text == 'one':
         text1=r.recognize_google(audio)
         print ("You said : "+text1)
         tts = gTTS(text="You said: ", lang='en')
-        ttsname1=("C:/Users/gonsa/Desktop/VoiceBasedEmail/hello1.mp3") #Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
+        ttsname1=("C:/Users/gonsa/Desktop/VoiceBasedEmail/hello1.mp3") 
         tts.save(ttsname1)
         playsound.playsound(ttsname1, True)
         os.remove(ttsname1)
         tts = gTTS(text=text1, lang='en')
-        ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/hello2.mp3") #Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
+        ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/hello2.mp3") 
         tts.save(ttsname)
 
         playsound.playsound(ttsname, True)
@@ -116,7 +115,7 @@ if text == '1' or text == 'One' or text == 'one':
     except sr.UnknownValueError:
         print("Google Speech Recognition could not understand audio.")
         tts = gTTS(text="Google Speech Recognition could not understand audio", lang='en')
-        ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/hello.mp3") #Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
+        ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/hello.mp3") 
         tts.save(ttsname)
         playsound.playsound(ttsname, True)
         os.remove(ttsname)
@@ -124,20 +123,20 @@ if text == '1' or text == 'One' or text == 'one':
     except sr.RequestError as e:
         print("Could not request results from Google Speech Recognition service; {0}".format(e)) 
         tts = gTTS(text="Could not request results from Google Speech Recognition service", lang='en')
-        ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/hello.mp3") #Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
+        ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/hello.mp3") 
         tts.save(ttsname)
         playsound.playsound(ttsname, True)
         os.remove(ttsname) 
 
 
     tts = gTTS(text="Do you want to send this mail? ", lang='en')
-    ttsname1=("C:/Users/gonsa/Desktop/VoiceBasedEmail/hello1.mp3") #Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
+    ttsname1=("C:/Users/gonsa/Desktop/VoiceBasedEmail/hello1.mp3") 
     tts.save(ttsname1)
     playsound.playsound(ttsname1, True)
     os.remove(ttsname1)
 
     tts = gTTS(text="Your choice: ", lang='en')
-    ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/hello.mp3") #Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
+    ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/hello.mp3") 
     tts.save(ttsname)
     playsound.playsound(ttsname, True)
     os.remove(ttsname)
@@ -155,7 +154,7 @@ if text == '1' or text == 'One' or text == 'one':
     except sr.UnknownValueError:
         print("Google Speech Recognition could not understand audio.")
         tts = gTTS(text="Google Speech Recognition could not understand audio. ", lang='en')
-        ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/hello.mp3") #Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
+        ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/hello.mp3") 
         tts.save(ttsname)
 
         playsound.playsound(ttsname, True)
@@ -164,7 +163,7 @@ if text == '1' or text == 'One' or text == 'one':
     except sr.RequestError as e:
         print("Could not request results from Google Speech Recognition service; {0}".format(e)) 
         tts = gTTS(text="Could not request results from Google Speech Recognition service. ", lang='en')
-        ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/hello.mp3") #Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
+        ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/hello.mp3") 
         tts.save(ttsname)
         playsound.playsound(ttsname, True)
         os.remove(ttsname)
@@ -172,10 +171,10 @@ if text == '1' or text == 'One' or text == 'one':
 
     if text3 == 'Yes' or text3 == 'yes' or text3 == 'YES':
         msg = text1
-        mail.sendmail('dummyvoicebasedemail@gmail.com','dummyvoicebasedemail@gmail.com',msg) #send part
+        mail.sendmail('dummyvoicebasedemail@gmail.com','dummyvoicebasedemail@gmail.com',msg)
         print ("Congrats! Your mail has been sent. ")
         tts = gTTS(text="Congrats! Your mail has been sent. ", lang='en')
-        ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/send.mp3") #Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
+        ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/send.mp3") 
         tts.save(ttsname)
         playsound.playsound(ttsname, True)
         os.remove(ttsname)
@@ -189,7 +188,7 @@ if text == '1' or text == 'One' or text == 'one':
     if text3 == 'No' or text3 == 'no' or text3 == 'NO':  
         print ("Safely logging you out:")
         tts = gTTS(text="Safely logging you out: ", lang='en')
-        ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/send.mp3") #Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
+        ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/send.mp3") 
         tts.save(ttsname)
         playsound.playsound(ttsname, True)
         os.remove(ttsname)
@@ -200,10 +199,10 @@ if text == '2' or text == 'tu' or text == 'two' or text == 'Tu' or text == 'to' 
     unm = ('dummyvoicebasedemail@gmail.com')  #username
     psw = ('dummyvoicebasedemail123')  #password
     mail.login(unm,psw)  #login
-    stat, total = mail.select('Inbox')  #total number of mails in inbox
-    print ("Number of mails in your inbox :"+str(total))
-    tts = gTTS(text="Total mails are :"+str(total), lang='en') #voice out
-    ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/total.mp3") #Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
+    stat, total = mail.select('Inbox')  
+    print ("Number of mails in your inbox :"+str(total)) #total number of mails in inbox
+    tts = gTTS(text="Total mails are :"+str(total), lang='en') 
+    ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/total.mp3") 
     tts.save(ttsname)
     playsound.playsound(ttsname, True)
     os.remove(ttsname)
@@ -220,12 +219,12 @@ if text == '2' or text == 'tu' or text == 'two' or text == 'Tu' or text == 'to' 
     print ("From: "+email_message['From'])
     print ("Subject: "+str(email_message['Subject']))
     tts = gTTS(text="From: "+email_message['From']+" And Your subject: "+str(email_message['Subject']), lang='en')
-    ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/mail.mp3") #Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
+    ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/mail.mp3") 
     tts.save(ttsname)
     playsound.playsound(ttsname, True)
     os.remove(ttsname)
     
-    #Body part of mails
+    #Body part of mail
     stat, total1 = mail.select('Inbox')
     stat, data1 = mail.fetch(total1[0], "(UID BODY[TEXT])")
     msg = data1[0][1]
@@ -233,7 +232,7 @@ if text == '2' or text == 'tu' or text == 'two' or text == 'Tu' or text == 'to' 
     txt = soup.get_text()
     print ("Body :"+txt)
     tts = gTTS(text="Body: "+txt, lang='en')
-    ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/body.mp3") #Example: path -> C:\Users\sayak\Desktop> just change with your desktop directory. Don't use my directory.
+    ttsname=("C:/Users/gonsa/Desktop/VoiceBasedEmail/body.mp3") 
     tts.save(ttsname)
     playsound.playsound(ttsname, True)
     os.remove(ttsname)
